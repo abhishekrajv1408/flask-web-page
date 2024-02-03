@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intern_Project</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'styles/index.css')}}" />
+  </head>
+
+  
+  <body class="body">
+    <div class="header">
+      <div class="titel">
+        <h1 class="titel-text">Intern_Project</h1>
+      </div>
+      <div class="nav">
+        <a href="#home-id">Home</a>
+        <a href="#footer-id">Contact</a>
+      </div>
+    </div>
+    <div class="main-body">
+      <div class="home" id="home-id">
+        <h1 class="titel-name">Intern Assingment</h1>
+        <p class="content">
+          This is the Intern assingment for ChinaTech Network. This will include
+          the HTML and CSS for Frontend and Flask for Backend.
+        </p>
+        <p class="contetn">
+          HTML (HyperText Markup Language) is the standard markup language used
+          to create and design documents on the World Wide Web. It provides the
+          structure and framework for web pages by using a system of tags and
+          attributes to define elements within a document.
+        </p>
+        <p class="content">
+          CSS (Cascading Style Sheets) is a style sheet language used for
+          describing the presentation of a document written in HTML or XML
+          (including XML dialects such as SVG, MathML, etc.). CSS describes how
+          elements should be rendered on screen, on paper, in speech, or on
+          other media.
+        </p>
+        <p class="content">
+          Flask is a lightweight and flexible web framework for Python. It is
+          designed to make getting started with web development quick and easy,
+          with the ability to scale up to complex applications. Flask is known
+          for its simplicity and minimalism, allowing developers to focus on
+          writing their application code rather than dealing with boilerplate.
+        </p>
+      </div>
+      <div class="date">
+        <h1>Time is:{{time}}</h1>
+        <h1>Today is:{{date}}</h1>
+      </div>
+    </div>
+
+    
+
+    <div class="current-user">
+        <a href="/display">Current User</a>
+    </div>
+
+    <div class="user-data">
+      <h1>Please Fill the Form</h1>
+      <form action="/add" class="form" method="post">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name">
+        <!-- <label for="text">Email:</label> -->
+        <!-- <input type="email" name="email" id="email"> -->
+        <label for="text">Contact Number:</label>
+        <input type="number" name="contact-number" id="contact-number">
+        <input type="submit" value="submit">
+      </form>
+    </div>
+
+    <div class="footer" id="footer-id">
+      <h1>Abhishek Raj Verma</h1>
+      <h3>9559321293</h3>
+      <h3>Address: Ghaziabad , UttarPradesh, India</h3>
+      
+    </div>
+  </body>
+</html>

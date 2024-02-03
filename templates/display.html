@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intern_Project</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{url_for('static', filename = 'styles/index.css')}}"
+    />
+  </head>
+
+  <body class="body">
+    <div class="header">
+      <div class="titel">
+        <h1 class="titel-text">Intern_Project</h1>
+      </div>
+    </div>
+
+    <div class="user-display">
+      <h1>Current User</h1>
+      <table>
+        <thead>
+          <th>Name</th>
+          <th>Contact Number</th>
+          <th>#</th>
+        </thead>
+        {% for data in profile %}
+        <tbody>
+          <td>{{data.name}}</td>
+          <td>{{data.number}}</td>
+          <td>
+            <a href="/delete/{{data.id}}" type="button">Delete</a>
+          </td>
+        </tbody>
+        {% endfor %}
+      </table>
+    </div>
+
+    <div class="footer" id="footer-id">
+      <h1>Abhishek Raj Verma</h1>
+      <h3>9559321293</h3>
+      <h3>Address: Ghaziabad , UttarPradesh, India</h3>
+    </div>
+  </body>
+</html>
